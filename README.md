@@ -1,4 +1,7 @@
-# CogentxKanbanApp
+# Cogentx Kanban App
+### Progressive Web App (PWA)
+
+Code based on Angular-Firebase course by [Fireship.io](https://fireship.io)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
