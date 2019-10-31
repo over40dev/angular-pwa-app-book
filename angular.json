@@ -122,8 +122,13 @@
               "devServerTarget": "cogentx-kanban-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "cogentx-kanban-app"
 }
