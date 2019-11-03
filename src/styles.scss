@@ -1,1 +1,72 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+$custom-typography: mat-typography-config(
+    $font-family: 'roboto'
+);
+
+@include mat-core($custom-typography);
+// @include mat-core();
+
+$custom-blue: (
+    '50': 'e2eaf2',
+    '100': 'b6cbdf',
+    '200': '85a9ca',
+    '300': '5487b4',
+    '400': '306da4',
+    '500': '0b5394',
+    '600': '0a4c8c',
+    '700': '084281',
+    '800': '063977',
+    '900': '032965',
+    'A100': '95b6ff',
+    'A200': '6294ff',
+    'A400': '2f71ff',
+    'A700': '155fff',
+    contrast: (
+      50: $black-87-opacity,
+      100: $black-87-opacity,
+      200: $black-87-opacity,
+      300: $black-87-opacity,
+      400: $black-87-opacity,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: $black-87-opacity,
+      A200: $black-87-opacity,
+      A400: $black-87-opacity,
+      A700: white,
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$cogentx-kanban-app-primary: mat-palette($mat-blue);
+$cogentx-kanban-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$cogentx-kanban-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+// $cogentx-kanban-app-theme: mat-light-theme($cogentx-kanban-app-primary, $cogentx-kanban-app-accent, $cogentx-kanban-app-warn);
+$cogentx-kanban-app-theme: mat-dark-theme($cogentx-kanban-app-primary, $cogentx-kanban-app-accent, $cogentx-kanban-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($cogentx-kanban-app-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

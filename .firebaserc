@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cogentx-kanban-app": {
+      "hosting": {
+        "cogentx-kanban-app": [
+          "cogentx-kanban-app"
+        ]
+      }
+    }
+  }
+}
