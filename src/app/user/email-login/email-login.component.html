@@ -5,10 +5,10 @@
       Returning User?
     </button>
   </div>
-  
+
   <div *ngIf="isLogin">
     <h3>Sign In</h3>
-    <button mat-stroked-button (click)="changeType('signup')">
+    <button size="small" mat-stroked-button (click)="changeType('signup')">
       New User?
     </button>
   </div>
@@ -48,7 +48,10 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field *ngIf="isSignup" [color]="passwordDoesMatch ? 'accent' : 'warn'"> 
+    <mat-form-field
+      *ngIf="isSignup"
+      [color]="passwordDoesMatch ? 'accent' : 'warn'"
+    >
       <input
         matInput
         formControlName="passwordConfirm"
@@ -63,18 +66,29 @@
 
     <mat-error class="server-error">{{ serverMessage }}</mat-error>
 
-    <button
+    <button 
       *ngIf="isPasswordReset"
+      mat-stroked-button
+      type="submit"
+      [disabled]="loading">
+      Send Reset Email
+    </button>
+
+    <button
+      *ngIf="!isPasswordReset"
       mat-raised-button
       color="accent"
       type="submit"
-      [disabled]="form.invalid || !passwordDoesMatch || loading"
-    >
+      [disabled]="form.invalid || !passwordDoesMatch || loading">
       Submit
     </button>
   </form>
 
-  <button *ngIf="isLogin && !isPasswordReset" mat-button (click)="changeType('reset')">
+  <button
+    *ngIf="isLogin && !isPasswordReset"
+    mat-button
+    (click)="changeType('reset')"
+  >
     Forgot Password?
   </button>
 </mat-card>
