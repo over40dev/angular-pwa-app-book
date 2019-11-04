@@ -85,10 +85,9 @@
   </form>
 
   <button
-    *ngIf="isLogin && !isPasswordReset"
     mat-button
-    (click)="changeType('reset')"
-  >
+    *ngIf="isLogin && !isPasswordReset"
+    (click)="changeType('reset')">
     Forgot Password?
   </button>
 </mat-card>
