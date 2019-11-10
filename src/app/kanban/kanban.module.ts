@@ -8,21 +8,30 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { SharedModule } from '../shared/shared.module';
 import { KanbanRoutingModule } from './kanban-routing.module';
-import { BoardListComponent } from './board-list/board-list.component';
+
+import { BoardsListComponent } from './boards-list/boards-list.component';
+import { BoardComponent } from './board/board.component';
+import { BoardDialogComponent } from './dialogs/board-dialog.component';
+import { TaskDialogComponent } from './dialogs/task-dialog.component';
 
 
 @NgModule({
   declarations: [
-    BoardListComponent,
+    BoardsListComponent,
+    BoardComponent,
+    BoardDialogComponent,
+    TaskDialogComponent,
   ],
   imports: [
     CommonModule,
     SharedModule,
     FormsModule,
+    RouterModule,
     KanbanRoutingModule,
     DragDropModule,
     MatDialogModule,
     MatButtonToggleModule,
-  ]
+  ],
+  entryComponents: [BoardDialogComponent, TaskDialogComponent]
 })
 export class KanbanModule { }
