@@ -10,8 +10,8 @@
         (click)="drawer.close()">Login</a>
       <a mat-list-item [routerLink]="['/kanban']"
         (click)="drawer.close()">Kanban</a>
-      <a mat-list-item [routerLink]="['/customers']"
-        (click)="drawer.close()">Customers</a>
+      <a mat-list-item [routerLink]="['/tic-tac-toe']"
+        (click)="drawer.close()">TicTacToe</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,7 +27,7 @@
 
       <div *ngIf="!(isHandset$ | async)">
         <a mat-button [routerLink]="['/kanban']">Kanban</a>
-        <a mat-button [routerLink]="['/customers']">Customers</a>
+        <a mat-button [routerLink]="['/tic-tac-toe']">TicTacToe</a>
         <a mat-button [routerLink]="['/login']"
           *ngIf="!(afAuth.authState | async)">🔑 Login</a>
         <a mat-button [routerLink]="['/login']"
@@ -50,7 +50,7 @@
           <i>💬</i>
           <span>Chat on Slack</span>
         </a>
-        <a mat-menu-item href="https://github.com/cogentx/cogentx-kanban-app">
+        <a mat-menu-item href="https://github.com/over40dev/angular-pwa-app-book">
           <i>💾</i>
           <span>Code on Github</span>
         </a>
