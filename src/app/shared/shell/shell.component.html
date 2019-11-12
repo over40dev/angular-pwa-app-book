@@ -14,14 +14,14 @@
         (click)="drawer.close()">TicTacToe</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+
     <mat-toolbar>
       <button type="button" aria-label="Toggle Sidenav" mat-icon-button
         (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
 
-      <span class="logo" [routerLink]="['/']">🔥 CogentX360 Kanban</span>
+      <span class="logo" [routerLink]="['/']">!CogentX360</span>
 
       <span class="fill-space"></span>
 
@@ -67,5 +67,4 @@
       </mat-menu>
     </mat-toolbar>
     <ng-content #shellContent></ng-content>
-  </mat-sidenav-content>
 </mat-sidenav-container>

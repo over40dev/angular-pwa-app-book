@@ -1,1 +1,23 @@
-<p>board works!</p>
+<mat-card class="outer-card">
+  <mat-card-header>
+    <mat-card-title>
+      TicTacToe
+    </mat-card-title>
+    <button mat-stroked-button status="danger" (click)="newGame()">
+      Start New Game
+    </button>
+  </mat-card-header>
+
+  <mat-card-content class="main-content">
+    <app-square
+      *ngFor="let val of squares; let i = index"
+      [value]="val"
+      (click)="makeMove(i)">
+    </app-square>
+  </mat-card-content>
+
+  <mat-card-footer>
+    <h3 *ngIf="!winner">Current Player: {{ player }}</h3>
+    <h3 *ngIf="winner">Player {{ winner }} won the game!</h3>
+  </mat-card-footer>
+</mat-card>
