@@ -1,5 +1,11 @@
-.outer-card {
-  margin: 20px auto;
+mat-card-content {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+mat-card-footer {
   padding: 20px;
 }
 
@@ -8,6 +14,10 @@
   grid-template-columns: 100px 100px 100px;
   grid-gap: 0;
   margin: 20px auto;
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
 }
 
 app-square {

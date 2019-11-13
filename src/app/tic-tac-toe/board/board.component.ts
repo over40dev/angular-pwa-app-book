@@ -49,15 +49,22 @@ export class BoardComponent implements OnInit {
     ];
 
     for (const line of lines) {
-      const [a, b, c] = line;
+      const [tile, b, c] = line.map(i => this.squares[i] );
 
       if (
-        this.squares[a] &&
-        this.squares[a] === this.squares[b] &&
-        this.squares[a] === this.squares[c]
+        tile &&
+        tile === b &&
+        tile === c
       ) {
-        return this.squares[a];
+        return tile;
       }
+      // if (
+      //   this.squares[a] &&
+      //   this.squares[a] === this.squares[b] &&
+      //   this.squares[a] === this.squares[c]
+      // ) {
+      //   return this.squares[a];
+      // }
     }
     return null;
   }
